@@ -6,44 +6,32 @@
 
 var sectionPortafolio = document.getElementById("portafolio");
 var links = document.getElementsByClassName("link");
-var scroll2 = window.pageYOffset;
-console.log("page" + scroll2);
 
-
-
-// var scroll = window.scrollY;
-
-// if (scroll > 606){
-//     links[0].classList.add("change");
-
-// } 
-
-// console.log(scroll);
-
-
-
-sectionPortafolio.onmouseenter = function () {
-    links[0].classList.add("change");
-    console.log(window.scrollY);
-}
-sectionPortafolio.onmouseleave = function () {
-    links[0].classList.remove("change");
-}
-var sectionAbout = document.getElementById("about");
-sectionAbout.onmouseenter = function () {
-    links[1].classList.add("change");
-    console.log(window.scrollY);
-}
-sectionAbout.onmouseleave = function () {
-    links[1].classList.remove("change");
-}
-var sectionContact = document.getElementById("contact");
-sectionContact.onmouseenter = function () {
-    links[2].classList.add("change");
-    console.log(window.scrollY);
-}
-sectionContact.onmouseleave = function () {
-    links[2].classList.remove("change");
+var titleChange = document.getElementById("project");
+window.onscroll = function () {
+    var valueScroll = window.pageYOffset;
+    console.log(valueScroll);
+    if(valueScroll > 100){
+       titleChange.classList.add("titleChange");
+    } else if (valueScroll < 100) {
+        titleChange.classList.remove("titleChange");
+        titleChange.classList.add("titleChange1");
+    }
+    if ((valueScroll > 650) && (valueScroll < 1600)){
+        links[0].classList.add("change");
+    } else {
+        links[0].classList.remove("change");
+    }
+    if ((valueScroll >= 1600) && (valueScroll < 2300)){
+        links[1].classList.add("change");
+    } else {
+        links[1].classList.remove("change");
+    }
+    if (valueScroll >= 2300){
+        links[2].classList.add("change");
+    } else {
+        links[2].classList.remove("change");
+    }
 }
 
 // Funcionalidad de imagenes de portafolio
@@ -213,18 +201,18 @@ function removeSearch() {
 
 var inputName = document.getElementById("name");
 inputName.oninvalid = function () {
-    inputName.setAttribute("placeholder", "Please enter your name");
+    inputName.setAttribute("placeholder", "*Please enter your name");
 }
 var inputEmail = document.getElementById("email");
 inputEmail.oninvalid = function () {
-    inputEmail.setAttribute("placeholder", "Please enter your email");
+    inputEmail.setAttribute("placeholder", "*Please enter your email");
 }
 var inputNumber = document.getElementById("number");
 inputNumber.oninvalid = function () {
-    inputNumber.setAttribute("placeholder", "Please enter your number");
+    inputNumber.setAttribute("placeholder", "*Please enter your number");
 }
 var inputMessage = document.getElementById("message");
 inputMessage.oninvalid = function () {
-    inputMessage.setAttribute("placeholder", "Please enter a message");
+    inputMessage.setAttribute("placeholder", "*Please enter a message");
 }
 

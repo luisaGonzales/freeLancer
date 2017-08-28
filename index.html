@@ -18,7 +18,7 @@
 	<!-- Colocamos el header -->
 	<header>
 		<div class="menu container">
-			<span class="text-uppercase project"> <a href="#home"> Start bootstrap</a> </span>
+			<span class="text-uppercase project" id="project"> <a href="#home"> Start bootstrap</a> </span>
 			<a href="#portafolio" class="text-uppercase link" id="linkPortafolio">Portafolio</a>
 			<a href="#about" class="text-uppercase link">About</a>
 			<a href="#contact" class="text-uppercase link">Contact</a>
@@ -103,13 +103,13 @@
 		
 		<form id="formulario">
 			<hr/>
-			<input type="text" class="info" placeholder="Name" id="name" required>
+			<div class="dato">Name</div> <input type="text" class="info" id="name" required>
 			<hr/>
-			<input type="email" class="info" placeholder="Email Address" id="email" required>
+			<div class="dato">Email Address</div> <input type="email" class="info"  id="email" required>
 			<hr/>
-			<input type="number" class="info" placeholder="Phone Number" maxlength="9" id="number" required>
+			<div class="dato">Phone Number</div> <input type="number" class="info"  maxlength="9" id="number" required>
 			<hr/>
-			<input type="text" class="info" placeholder="Message" id="message" required>
+			<div class="dato">Message</div><input type="text" class="info"  id="message" required>
 			<hr/>
 			<input type="submit" value="Send" class="btnSend">
 		</form>
