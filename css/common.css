@@ -85,3 +85,14 @@
     display: inline-block;
     color: #2c3e50;
 }
+
+/* Titulos y cambios */
+
+.titleChange {
+    font-size: 150% !important;  
+} 
+
+.titleChange1 {
+    font-size: 120%;
+}
+
